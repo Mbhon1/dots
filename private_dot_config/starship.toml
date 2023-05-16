@@ -34,8 +34,8 @@ disabled = true
 
 
 [directory]
-format = "[]($style)[ ](bg:#312C2E fg:#DD8F6E)[$path](bg:#312C2E fg:#83A598 bold)[ ]($style)"
-style = "bg:none fg:#312C2E"
+format = "[]($style)[ ](bg:#fe8019 fg:#312C2E)[$path](bg:#fe8019 fg:#312C2E bold)[ ]($style)"
+style = "bg:none fg:#fe8019"
 truncation_length = 3
 truncate_to_repo=false
 
@@ -46,13 +46,13 @@ truncate_to_repo=false
 "Pictures" = " "
 
 [git_branch]
-format = "[]($style)[[ ](bg:#312C2E fg:#8EC07C bold)$branch](bg:#312C2E fg:#83A598)[ ]($style)"
-style = "bg:none fg:#312C2E"
+format = "[]($style)[[ ](bg:#8EC07C fg:#312C2E bold)$branch](bg:#8EC07C fg:#312C2E)[ ]($style)"
+style = "bg:none fg:#8EC07C"
 
 [git_status]
 # $all status$ahead_behind
-format = "[]($style)[$all_status$ahead_behind](bg:#312C2E fg:#b4befe)[ ]($style)"
-style = "bg:none fg:#312C2E"
+format = "[]($style)[$all_status$ahead_behind](bg:#689d6a fg:#312C2E)[ ]($style)"
+style = "bg:none fg:#689d6a"
 conflicted = "="
 ahead =	"⇡${count}"
 behind = "⇣${count}"
@@ -73,12 +73,12 @@ deleted = "${count}"
 [cmd_duration]
 min_time = 1
 # duration & style 
-format = "[]($style)[[神](bg:#312C2E fg:#eba0ac bold)$duration](bg:#312C2E fg:#BBC3DF)[ ]($style)"
+format = "[]($style)[[神](bg:#928374 fg:#312C2E bold)$duration](bg:#928374 fg:#312C2E)[ ]($style)"
 disabled = false
-style = "bg:none fg:#312C2E"
+style = "bg:none fg:#928374"
 
 [time]
 disabled = false
 time_format = "%R" # hour:minute format
-style = "bg:none fg:#312C2E"
-format = "[]($style)[[ ](bg:#312C2E fg:#eba0ac bold)$time](bg:#312C2E fg:#BBC3DF)[ ]($style)"
+style = "bg:none fg:#d79923"
+format = "[]($style)[[ ](bg:#d79923 fg:#312C2E bold)$time](bg:#d79923 fg:#312C2E)[ ]($style)"
