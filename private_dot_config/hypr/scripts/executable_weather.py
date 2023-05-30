@@ -27,8 +27,8 @@ WEATHER_ICON = {
 
 data = {}
 apiKey = ""
-lat = ""
-lon = ""
+lat = "-26.195246"
+lon = "28.034088"
 try:
     weather = requests.get(
         f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}&units=metric"
