@@ -60,7 +60,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/Pictures/wallpapers/gruvbox/deviljump.jpg", height);
+    background-image:            url("~/Pictures/swww-walls/gruvbox_bars.png", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

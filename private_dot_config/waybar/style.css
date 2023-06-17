@@ -1,0 +1,241 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(87, 61, 38, 0);
+}
+
+tooltip {
+  background: rgba(87, 61, 38, 0.5);
+  border-radius: 0px 0px 6px 6px;
+}
+tooltip label {
+  color: #282828;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #313244;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: #be2d26;
+}
+
+#workspaces button.focused {
+  color: #be2d26;
+  background: #be2d26;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: #6ba18a;
+  border-radius: 6px;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #fff9d5;
+  border-radius: 6px;
+}
+
+#language,
+#custom-playerctl,
+#custom-netusage,
+#window,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#custom-notification,
+#workspaces,
+#custom-launch_wofi,
+#custom-lock_screen,
+#custom-light_dark,
+#custom-power_btn,
+#custom-power_profile,
+#custom-weather,
+#custom-cava-internal,
+#custom-media,
+#custom-cycle_wall,
+#custom-myhyprv,
+#custom-updates,
+#tray,
+#backlight {
+  background: rgba(87, 61, 38, 0.5);
+  padding: 0px 10px;
+  margin-top: 6px;
+}
+
+#workspaces {
+  border-radius: 6px;
+  margin-left: 5px;
+  padding-right: 0px;
+  padding-left: 5px;
+  background-color: #bdae93;
+}
+
+#custom-cycle_wall {
+  background: #d0bc9d;
+  color: #fff;
+  background-size: 500% 500%;
+  font-weight: bolder;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+#custom-launch_wofi {
+  margin-left: 5px;
+  border-radius: 6px;
+  padding-right: 15px;
+  background-color: #cc241d;
+  color: #282828;
+}
+
+#custom-playerctl {
+  border-radius: 0px 0px 6px 6px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+#custom-power_btn {
+  margin-right: 5px;
+  border-radius: 6px;
+  padding-right: 13px;
+  background-color: #d65d0e;
+  color: #282828;
+}
+
+#custom-cava-internal {
+  border-radius: 10px;
+  color: #f9f5d7;
+  padding: 5px 8px;
+  border-style: solid;
+  background-color: #93cfd7;
+}
+
+/* #custom-light_dark { */
+/*   margin-right: 5px; */
+/*   border-radius: 0px 6px 6px 0px; */
+/*   color: #f9f5d7; */
+/*   border-left: none; */
+/* } */
+
+#clock {
+  color: #282828;
+  border-radius: 6px;
+  background-color: #d5c4a1;
+  animation: gradient 20s ease infinite;
+}
+
+#custom-netusage,
+#network {
+  border-radius: 6px;
+  background-color: #689d6a;
+  color: #282828;
+  margin-right: 5px;
+}
+
+#cpu {
+  border-radius: 6px 0px 0px 6px;
+}
+
+#custom-weather,
+#custom-notification,
+#custom-updates {
+  color: #282828;
+  background-color: #928374;
+}
+
+#custom-updates {
+  border-radius: 0px 6px 6px 0px;
+  margin-right: 5px;
+}
+
+#custom-weather {
+  border-radius: 6px;
+  margin-right: 5px;
+}
+
+#custom-notification {
+  border-radius: 6px 0px 0px 6px;
+}
+
+#pulseaudio,
+#cpu,
+#temperature,
+#memory,
+#disk {
+  background-color: #8ec07c;
+  color: #282828;
+}
+
+#custom-myhyprv {
+  color: #98971a;
+}
+
+#tray {
+  border-radius: 6px;
+  margin-right: 5px;
+  background-color: #458588;
+  padding: 0px 10px;
+}
+
+#pulseaudio {
+  border-radius: 0px 6px 6px 0px;
+  margin-right: 5px;
+}
+
+#pulseaudio.microphone {
+  color: #d19ecb;
+}
+
+#custom-media {
+  border-radius: 6px;
+  background-color: #98971a;
+  color: #282828;
+  margin-left: 5px;
+}
+
+#temperature.critical {
+  color: #e92d4d;
+}
+
+#workspaces {
+  padding-right: 0px;
+  padding-left: 5px;
+}
+
+#window {
+  border-radius: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#custom-launch_firefox,
+#custom-launch_thunderbird,
+#custom-launch_thunar,
+#custom-launch_kitty {
+  margin-left: 10px;
+  font-size: 24px;
+  margin-right: 10px;
+  color: #928374;
+  border-right: 0px;
+}
+
+#custom-launch_firefox,
+#custom-launch_kitty {
+  font-size: 20px;
+}
