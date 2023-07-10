@@ -1,0 +1,53 @@
+#  ┌─┐┬  ┬┌─┐┌─┐
+#  ├─┤│  │├─┤└─┐
+#  ┴ ┴┴─┘┴┴ ┴└─┘
+alias mirrors="sudo reflector --verbose --latest 5 --country 'United States' --age 6 --sort rate --save /etc/pacman.d/mirrorlist"
+
+alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias maintain="yay -Sc && sudo pacman -Scc"
+alias purga="sudo pacman -Rns $(pacman -Qtdq) ; sudo fstrim -av"
+alias update="yay -Syu --nocombinedupgrade"
+
+alias vm-on="sudo systemctl start libvirtd.service"
+alias vm-off="sudo systemctl stop libvirtd.service"
+
+alias musica="ncmpcpp"
+
+alias ls='lsd -a --group-directories-first'
+alias ll='lsd -la --group-directories-first'
+alias lt="lsd --tree"
+alias la="lsd -lAF"
+alias lg="lsd -F --group-directories-first"
+
+alias vim="nvim"
+
+alias gi="git init"
+alias ga="git add"
+alias gc="git commit -m"
+alias gra="git remote add"
+alias gs="git status"
+alias lazy="lazygit"
+
+alias ni="npm install"
+alias nextapp="npx create-next-app@latest"
+alias nrd="npm run dev"
+
+alias kt="kitty +kitten themes"
+alias icat="kitty +kitten icat"
+alias mdc="mdcat"
+
+alias tsb="tty-clock -sxcBS"
+alias tss="tty-clock -Scs"
+alias tx="tty-clock -Sct"
+
+alias p1="pipes.sh -t 1"
+alias p5="pipes.sh -t 5"
+alias p7="pipes.sh -t 7"
+
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+alias nvim-kick="NVIM_APPNAME=kickstart nvim"
+alias nvim-nvchad="NVIM_APPNAME=NvChad nvim"
+alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
+alias ccd="chezmoi cd"
+alias cca="chezmoi add"
