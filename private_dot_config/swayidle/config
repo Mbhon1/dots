@@ -1,0 +1,3 @@
+timeout 800 '/home/mbhon1/.config/hypr/scripts/lock' 
+timeout 900 'hyprctl dispatch dpms off && systemctl suspend' resume 'hyprctl dispatch dpms on'
+before-sleep '/home/mbhon1/.config/hypr/scripts/lock'
