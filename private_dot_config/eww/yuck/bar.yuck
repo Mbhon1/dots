@@ -1,0 +1,34 @@
+(defwidget bar-modules-left []
+           (box :class "bar-modules-left"
+                :orientation "h"
+                :space-evenly false
+                :halign "start"
+           )
+)
+
+(defwidget bar-modules-center []
+           (box :class "bar-modules-center"
+                :orientation "h"
+                :space-evenly false
+                :halign "center"
+           )
+)
+
+(defwidget bar-modules-right []
+           (box :class "bar-modules-right"
+                :orientation "h"
+                :space-evenly false
+                :halign "end"
+           )
+)
+
+(defwidget bar []
+           (box :class "bar"
+                :orientation "h"
+                :space-evenly true
+                (bar-modules-left)
+                (bar-modules-center)
+                (bar-modules-right)
+           )
+)
+

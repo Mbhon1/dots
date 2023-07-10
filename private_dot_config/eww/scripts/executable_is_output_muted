@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pactl get-sink-mute @DEFAULT_SINK@ | sed 's/Mute: //g'
+

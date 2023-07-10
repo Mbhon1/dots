@@ -1,0 +1,10 @@
+#!/bin/bash
+
+is_muted=$(./scripts/is_input_muted)
+
+if [[ $is_muted == "yes" ]]; then
+  echo 0
+else
+  pactl get-source-volume @DEFAULT_SOURCE@ | cut -f2 -d / | sed 's/  //g' | xargs echo | cut -f1 -d " " | sed 's/%//g'
+fi
+
