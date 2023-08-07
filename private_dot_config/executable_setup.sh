@@ -34,18 +34,18 @@ nvidia_stage=(
 
 #the main packages
 install_stage=(
-    kitty 
-    waybar-hyprland 
-    swww 
+    kitty   
+    swww
     swaylock-effects 
+    rofi 
     wlogout 
     xdg-desktop-portal-hyprland 
     swappy 
-    grim 
     slurp 
     thunar 
     btop
     firefox
+    mailspring
     mpv
     pamixer 
     pavucontrol 
@@ -68,9 +68,36 @@ install_stage=(
     ripgrep
     nodejs
     exa
-    lsd
+    lazygit
     cbonsai
+		eww-wayland
+		grimblast-git
+    npm
+    ags
+    supergfxctl
+    hyprpicker
+    wf-recorder
+    watershot
+    imagemagick
+    wl-gammactl
+    gnome-shell-extenstions
+    gnome-bluetooth-3.0
+    sddm-theme-corners-git
+    spicetify-cli
+    colloid-icon-theme-git
+    qogir-gtk-theme
+    spotify
+    steam-devices-git
+    whitesur-gtk-theme
+    wlogout
+    flatpak
+    ranger
+    zathura
+    neofetch
+    onefetch
+    fzf
 )
+
 
 for str in ${myArray[@]}; do
   echo $str
