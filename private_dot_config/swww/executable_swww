@@ -1,9 +1,88 @@
 #!/bin/bash
 
-folder="${HOME}/mbhon1/Pictures/swww-walls"
-pic=$(ls $folder/* | shuf -n1)
+## Files
+CONFIG="$HOME/.config/wofi/config"
+STYLE="$HOME/.config/wofi/style.css"
+COLORS="$HOME/.config/wofi/colors"
 
-# hyprctl hyprpaper wallpaper eDP-1,"file://$pic"
 
-swww img -t any --transition-fps 90 $pic & &>/dev/null
-sleep 1
+DIR=$HOME/Pictures/swww-walls
+PICS=($(ls ${DIR}))
+
+RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
+
+if [[ $(pidof swaybg) ]]; then
+  pkill swaybg
+fi
+
+## Wofi Command
+wofi_command="wofi --show dmenu \
+			--prompt 'choose..'
+			--conf ${CONFIG} --style ${STYLE} --color ${COLORS} \
+			--width=300 --height=250 \
+			--cache-file=/dev/null \
+			--hide-scroll --no-actions \
+			--define=matching=fuzzy"
+
+menu(){
+printf "1. astronaut\n" 
+printf "2. devillevitate\n" 
+printf "3. gruvbox_bars\n" 
+printf "4. pacman-ghosts\n" 
+printf "5. solar-system\n"
+printf "6. W14_Car_Studio_2\n"
+printf "7. octopus\n"
+printf "8. houses\n"
+printf "9. comfy-room\n"
+printf "10. random"
+}
+
+swww query || swww init
+
+main() {
+choice=$(menu | ${wofi_command} | cut -d. -f1)
+case $choice in
+1)
+    swww img ${DIR}/astronaut.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+2)
+    swww img ${DIR}/devillevitate.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+3)
+    swww img ${DIR}/gruvbox_bars.png --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+4)
+    swww img ${DIR}/pacman-ghosts.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+5)
+    swww img ${DIR}/solar-system.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+6)
+    swww img ${DIR}/W14_Car_Studio_2.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+7)
+    swww img ${DIR}/octopus.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+8)
+    swww img ${DIR}/houses.jpg --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+9)
+    swww img ${DIR}/comfy-room.png --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+10)
+    swww img ${DIR}/${RANDOMPICS} --transition-fps 30 --transition-type any --transition-duration 3
+    return
+    ;;
+esac
+}
+
+killall -f || main
